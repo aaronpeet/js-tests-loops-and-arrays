@@ -4,6 +4,11 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+    arr.shift()
+    arr.push("This")
+
+
+    return arr
 }
 
 
@@ -16,9 +21,14 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    let largest = [arr]
+    largest = Math.max.apply(Math, arr)
+    return largest
 }
-
-
+ 
+// set variable for whole array
+// Math for the arr - max / apply to array
+// return largest number from line 25
 // ------------------------------------------
 
 
@@ -28,7 +38,17 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
+    let arrLength = arr.length
+    let output = 0
+    let arrOutput = []
+    for (i = 0; i < arr.length; i++){
+        output = arrLength * arr[i]    // NOTE arrLength * arr[i] tells it to go into the index and multiply by what is inside the index
+                                      // instead of arrLength * i which only multiplys by the index position such as [...0,1,2,3...]
+        arrOutput.push(output)
+    }
+return arrOutput
 }
+
 
 
 // ------------------------------------------
@@ -63,7 +83,9 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
-
+    let standardCost = flights.prices.standard.find(cost => cost.standard)
+    
+    console.log(standardCost)
 }
 
 
