@@ -83,9 +83,7 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
-    let standardCost = flights.prices.standard.find(cost => cost.standard)
-    
-    console.log(standardCost)
+   
 }
 
 
